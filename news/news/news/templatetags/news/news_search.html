@@ -1,0 +1,10 @@
+<form method="get">
+    {{ filterset.form.as_p }}
+    <button type="submit">Поиск</button>
+</form>
+
+<ul>
+    {% for news in news_list %}
+        <li>{{ news.title }} ({{ news.date_published }})</li>
+    {% endfor %}
+</ul>
